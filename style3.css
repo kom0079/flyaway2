@@ -1,0 +1,872 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #91e2cd;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
+}
+
+#navbar.navbar--dark {
+  background-color: #444444;
+  padding: 8px;
+}
+
+.navbar_logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: white;
+}
+
+.navbar_menu {
+  display: flex;
+}
+
+.navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar_menu_item:hover {
+  border-color: var(--color-white);
+  background-color: var(--color-dark-pink);
+}
+
+.navbar_toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'G마켓 산스';
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+
+
+.vid-header {
+height: 100vh;
+display: flex;
+
+color: #ffffff;
+}
+
+.container {
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: left;
+}
+
+.slidewrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slidewrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+.header-content {
+  z-index: 2;
+
+}
+
+.header-content h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+  position : relative;
+  top: 350px;
+  left: -400px;
+}
+
+
+
+.header-content p {
+  font-size: 1rem;
+  position : relative;
+  top: 350px;
+  left: -400px;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  background: white;
+  border-top: 1px;
+  color: black;
+  font-size: 1.0rem;
+  padding: 1rem 2rem;
+
+  text-decoration: none;
+}
+.btn {
+  position : relative;
+  top: 150px;
+  left: -1920px;
+}
+
+.image1 {
+
+  position : relative;
+top: -800px;
+left: 300px;
+
+
+}
+
+
+
+.fullscreen-vid-wrap {
+  float: left;
+}
+
+
+a {text-decoration: none;
+  color: #FFFFFF;
+}
+
+
+@media(max-width: 960px) {
+
+  .navbar__toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #444444;
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+.island2 {position: relative; width: 50%; padding-bottom: 56.25%;}
+.island3 {position: relative; top: 300px;width: 50%; padding-bottom: 56.25%;}
+.island4 {position: relative; top: 800px;width: 50%; padding-bottom: 56.25%;}
+.island5 {position: relative; top: 1300px;width: 50%; padding-bottom: 56.25%;}
+}
+
+.header-overlay {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #000000;
+
+  opacity: 0.25;
+}
+
+.line {position : relative;
+left: 50px;
+ top: 10040px; }
+
+
+ .companyint { position: relative;
+   top: 100px;
+   text-align: center;
+
+
+ }
+
+ .companyint h3 {
+   font-size: 40px;
+ }
+
+ .shot {
+   position : relative;
+
+    top: 250px;
+    font-size: 10px;
+    color: #000000;
+
+ }
+
+ .shot {   font-family: 'G마켓 산스';
+  text-align: center;
+    font-size: 12px;
+    color: #444444;
+ }
+
+ .shot1 {
+   position : relative;
+    top: 100px;
+    font-size: 20px;
+    color: #444444;
+
+
+ }
+   .shot1 {  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+ }
+
+.shot1 h1 {    font-size: 40px;
+
+}
+
+
+
+
+
+ .old {
+   position : absolute;
+  top: 2555px;
+ left: 0px;}
+
+
+
+.shot3 {
+font-size: 10px;
+color: #000000;
+}
+.shot3 {
+  position : relative;
+ top: 4250px;
+left: 830px;}
+ .drone {
+  position : relative;
+  top: 4240px;
+left: 550px;}
+
+.droneinf {
+  position : relative;
+ top: 4250px;
+left: 530px;}
+
+.man {
+  position : absolute;
+ top: 1755px;
+left: -10px;}
+.mon1 {
+  position : absolute;
+ top: 1870px;
+left: -10px;}
+.mont {
+  position : absolute;
+ top: 1870px;
+left: -10px;}
+
+
+ .pic {position : absolute;
+  top: 6540px;
+left: 900px;}
+
+  .pic2 {position : absolute;
+   top: 7050px;
+ left: 900px; }
+
+   .pic3 {position : absolute;
+    top: 7050px;
+  left: 00px; }
+
+    .pic4 {position : absolute;
+     top: 1160px;
+       left: 360px;
+}
+
+.nam {
+  position : relative;
+   top: 5510px;
+   left: 70px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+.nam2 {
+  position : relative;
+   top: 5480px;
+   left: 970px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+
+.nam3 {
+  position : relative;
+   top: 5940px;
+   left: 970px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+
+.nam4 {
+  position : relative;
+   top: 5910px;
+   left: 70px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+.textbox1 {position:absolute;z-index:1;top:50%;left:25%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+
+.text1{
+  color: #444444;
+     font-size: 15px;
+}
+
+.text1{
+  position : absolute;
+   top: 1800px;
+   left: 1150px;
+   font-size: 20px;
+   color: #444444;
+     text-align: center;
+}
+
+.text1 h3 {
+
+   font-size: 30px;
+   color: #444444;
+}
+.text2{
+  position : absolute;
+   top: 2800px;
+   left: 50px;
+   font-size: 20px;
+   color: white;
+     text-align: center;
+}
+
+.text2 h3 {
+
+   font-size: 30px;
+   color: #ffffff;
+}
+
+.text2 p {
+
+   font-size: 15px;
+   color: #ffffff;
+}
+
+.textbox p{
+   font-size: 20px;
+   color: #ffffff;
+
+}
+
+.shot5 {
+  font-size: 40px;
+  color: #444444;
+}
+.shot5 {
+  position : absolute;
+   top: 7800px;
+   left: 850px;
+
+     text-align: center;
+}
+.island2 {
+  position : absolute;
+   top: 1000px;
+   left: 150px;
+}
+
+.grn {
+  position : absolute;
+   top: 600px;
+
+}
+
+.paperset {
+  padding: 50px;
+  text-align: center;
+  max-width: 200px;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+
+
+}
+
+.paperset h1, h2 {
+  position: relative;
+top: 100px;
+  margin: auto;
+  font-size: 25px;
+  margin: auto;
+    margin-bottom: 10px;
+}
+
+.won {position: relative;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  line-height: 170px;
+  font-size: 70px;
+  margin: 50px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+.won1 {position: relative;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  line-height: 170px;
+  font-size: 70px;
+  margin: 50px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+.won2 {position: relative;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  line-height: 170px;
+  font-size: 70px;
+  margin: 50px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+.won {
+  background: url('1x/islandpic.jpg' )
+
+}
+
+.won1 {
+    background: url('1x/jakpic.jpg' )
+}
+
+.won2 {
+    background: url('1x/taepic.jpg' )
+}
+
+.paperset h1, h2, p {
+  color: var(--color-dark-grey);
+}
+
+.paper_name h1 {
+  color: #49817a;
+}
+
+.paper_name2 h1 {
+  color: #ffac27
+}
+
+.paper_name3 h1 {
+    color: #9d5fff
+  }
+
+
+
+
+
+
+.islandinf {
+color: #444444;
+font-size: 15px;
+}
+.islandinf {
+  position : relative;
+   top: 250px;
+   left: 1020px;
+}
+
+
+
+.islandname {
+  position : absolute;
+   top: 1050px;
+   left: 1020px;
+}
+.islandname {
+color: #333333;
+font-size: 20px;
+}
+.island3 {
+  position : absolute;
+   top: 1500px;
+   left: 150px;
+}
+.island4 {
+  position : absolute;
+   top: 1500px;
+   left: 710px;
+}
+.island5 {
+  position : absolute;
+   top: 1500px;
+   left: 1270px;
+}
+.back {
+  position: relative;
+  top: -710px;
+
+}
+
+
+.vr {
+  background: url('1x/back1.jpg') center/cover no-repeat;
+  padding: 40px;
+  padding-top: 420px;
+  text-align: center;
+}
+
+.vr1 {
+  background: url('1x/back2.jpg') center/cover no-repeat;
+  padding: 40px;
+  padding-top: 420px;
+  text-align: center;
+}
+.vr2 {
+  background: url('1x/back3.jpg') center/cover no-repeat;
+  padding: 100px;
+  padding-top: 420px;
+  text-align: center;
+}
+
+.vr4 {
+  background: url('1x/back4.jpg') center/cover no-repeat;
+  padding: 100px;
+  padding-top: 420px;
+  text-align: center;
+}
+
+.white1 {
+  position : relative;
+   top: -200px;
+   left: 420px;
+}
+.white2 {
+  position : relative;
+   top: -50px;
+   left: 110px;
+}
+
+.textbox1 {
+  text-align: left;
+
+}
+.textbox1 {
+  position: relative;
+top: -400px;
+left: 1400px;
+}
+h3 {  font-size: 30px;}
+.vrcam {
+
+  position : relative;
+   top: -50px;
+   left: 320px;
+}
+.companyback1 {
+  position: relative;
+  top: -100px;
+}
+
+.keyword { position: relative;
+  top: 100px;
+  left: 470px;
+}
+
+.islandpic {  position: absolute;
+  top: 920px;
+  left: 385px;
+}
+
+.islandintro h1 {
+  color: #f5ad4a;
+  font-size: 25px;
+}
+.islandintro h1 {
+  position: absolute;
+  top: -50px;
+  left: 00px;
+}
+.islandintro h2 {
+  font-size: 20px;
+}
+.islandintro  {
+  position: absolute;
+  top: 1280px;
+  left: 400px;
+}
+.jak {
+  position : absolute;
+   top: 1000px;
+   left: 150px;
+}
+.jak1 {
+  position : absolute;
+   top: 1500px;
+   left: 150px;
+}
+
+
+
+/* 모바일용 */
+@media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .navbar_toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #91e2cd;
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar_menu.open {
+    display: block;
+  }
+.islandset {  flex-direction: column;
+
+}
+.vr {position: relative; width: 300%; padding-bottom: 56.25%; right: 500px;}
+.vr2 {position: relative; width: 300%; padding-bottom: 56.25%; right: 500px;}
+.man img {position: relative; width: 210%; padding-bottom: 56.25%; right: 500px;
+top:200px;}
+
+.text1 h3 {position: absolute;; width: 100%;left: 300%;}
+.text2  { font-size: 10px;}
+.old img {position: relative; width: 210%; padding-bottom: 56.25%; right: 500px;}
+.islandinf {position: relative; top: 500px; left: 50px; font-size: 7px;
+    flex-direction: column; text-align: left;
+   }
+
+   .islandinf  p {position: relative; left: -30px;font-size: 10px;
+   text-align: left;
+      }
+      .islandinf  h2 {position: relative; left: -40px;font-size: 20px;
+      text-align: left; margin: 10px;
+         }
+
+         .islandinf  h4 {position: relative; top: -20px;left: -40px;font-size: 10px;
+         text-align: left; margin: 10px;
+            }
+
+.shot3 h1 { position: absolute;  width: 100%; top:-200px;left: -670px;}
+.drone video {position: absolute; width: 100%; top:-200px;left: -550px;}
+.droneinf img {position: absolute; width: 100%;top:200px;left: -520px; }
+.island2 video {position: absolute; width: 180%; top:-100px;left: -130px;}
+.island3 video {position: absolute; width: 180%; top:400px;left: -130px;}
+.island4 video {position: absolute; width: 180%; top:800px;left: -690px;}
+.island5 video {position: absolute; width: 180%; top:1200px;left: -1250px;}
+.vrcam iframe {position: absolute; width: 90%; top:00px;left: -310px;}
+
+.paperset {
+  flex-direction: column;
+
+}
+
+.shot1 {
+  position: relative;
+  left: 20px;
+}
+.shot2 {
+  position: relative;
+  left: 20px;
+}
+.paperset h1,h2 {position: relative;
+ left: 140px;
+  margin : auto;
+
+}
+
+
+
+
+.won {position: relative;
+  top: 100px;
+  width: 350px;
+  height: 350px;
+
+  line-height: 170px;
+  font-size: 70px;
+  margin: 20px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+
+.won1 {position: relative;
+  top: 100px;
+  width: 350px;
+  height: 350px;
+
+  line-height: 170px;
+  font-size: 70px;
+  margin: 20px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+
+
+.won2 {position: relative;
+  top: 100px;
+  width: 350px;
+  height: 350px;
+
+  line-height: 170px;
+  font-size: 70px;
+  margin: 20px; 0;
+  border: 1px;
+  border-radius: 50%;
+}
+
+}
