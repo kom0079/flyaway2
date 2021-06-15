@@ -1,0 +1,537 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+}
+
+body {
+  margin: 0;
+  font-family: 'G마켓 산스';
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fffff0;
+  overflow-x: hidden;
+}
+
+* {margin:0;padding:0;}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+
+
+
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color:
+  align-items: center;
+  color: white;
+  padding: 25px;
+  z-index: 30;
+
+}
+
+.navbar_menu {
+  display: flex;
+}
+
+
+.navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+      border-radius: white;
+}
+
+.navbar_menu_item.active {
+  border: 1px solid white;
+
+
+}
+
+.navbar_menu_item:hover {
+  background-color: black;
+}
+
+#navbar {
+  position: relative;
+
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
+
+
+
+
+.section input[id*="slide"] {display:none;}
+
+.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
+.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+.section .slidelist > li > a {display:block;position:relative;}
+.section .slidelist > li > a video {width:100%;}
+.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+.section .slidelist .textbox {position:absolute;z-index:1;top:40%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+.section .slidelist .textbox h3 {font-size:36px;color:#fff;;transform:translateY(30px);transition:all .5s;}
+.section .slidelist .textbox p {font-size:16px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+
+.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+.section .slidelist .textbox {position:absolute;z-index:1;top:40%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+.section .slidelist .textbox h3 {font-size:50px;color:#fff;;transform:translateY(30px);transition:all .5s;}
+.section .slidelist .textbox p {font-size:16px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+/* input에 체크되면 슬라이드 효과 */
+.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+/* input에 체크되면 텍스트 효과 */
+.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+/* 좌,우 슬라이드 버튼 */
+.slide-control > div {display:none;}
+.section .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+.section .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+.section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+.section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+.section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+
+
+
+#home {
+  text-align: center;
+}
+
+
+
+
+.vid-header {
+height: 100vh;
+display: flex;
+
+color: #ffffff;
+}
+
+.container {
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: left;
+}
+
+.slidewrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slidewrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+.header-content {
+  z-index: 3;
+
+}
+
+.header-content h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+  position : relative;
+  top: 350px;
+  left: -400px;
+}
+
+
+
+.header-content p {
+  font-size: 1rem;
+  position : relative;
+  top: 350px;
+  left: -400px;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  background: white;
+  border-top: 1px;
+  color: black;
+  font-size: 1.0rem;
+  padding: 1rem 2rem;
+
+  text-decoration: none;
+}
+.btn {
+  position : relative;
+  top: 150px;
+  left: -1920px;
+}
+
+
+
+
+.fullscreen-vid-wrap {
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+.navbar {
+  flex-direction: column;
+align-items: flex-start;
+}
+
+
+.header-overlay {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #000000;
+
+  opacity: 0.25;
+}
+
+.line {position : relative;
+left: 50px;
+ top: 10040px; }
+
+ .shot {
+   position : relative;
+
+    top: 850px;
+    font-size: 10px;
+    color: #000000;
+
+ }
+
+ .shot {   font-family: 'G마켓 산스';
+  text-align: center;
+    font-size: 15px;
+    color: #444444;
+ }
+
+ .shot1 {
+   position : relative;
+    top: 5000px;
+    font-size: 20px;
+    color: #000000;
+
+ }
+ .shot1 {   font-family: 'Noto Sans KR';
+  text-align: center;
+ }
+
+ .old {
+   position : absolute;
+  top: 2555px;
+ left: 0px;}
+
+ .droneinf {
+   position : absolute;
+  top: 3140px;
+}
+
+.shot3 {
+font-size: 20px;
+color: #000000;
+}
+.shot3 {
+  position : relative;
+ top: 4770px;
+left: 850px;}
+ .drone {
+  position : relative;
+  top: 4840px;
+left: 450px;}
+
+.droneinf {
+  position : relative;
+ top: 4880px;
+left: 430px;}
+
+.man {
+  position : absolute;
+ top: 1755px;
+left: -10px;}
+.mon1 {
+  position : absolute;
+ top: 1870px;
+left: -10px;}
+.mont {
+  position : absolute;
+ top: 1870px;
+left: -10px;}
+
+
+ .pic {position : absolute;
+  top: 6540px;
+left: 900px;}
+
+  .pic2 {position : absolute;
+   top: 7050px;
+ left: 900px; }
+
+   .pic3 {position : absolute;
+    top: 7050px;
+  left: 00px; }
+
+    .pic4 {position : absolute;
+     top: 6540px;
+       left: 0px;
+}
+
+.nam {
+  position : relative;
+   top: 5510px;
+   left: 70px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+.nam2 {
+  position : relative;
+   top: 5480px;
+   left: 970px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+
+.nam3 {
+  position : relative;
+   top: 5940px;
+   left: 970px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+
+.nam4 {
+  position : relative;
+   top: 5910px;
+   left: 70px;
+   font-size: 15px;
+   color: #ffffff;
+
+}
+.textbox1 {position:absolute;z-index:2;top:50%;left:25%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+
+.text1{
+  color: #444444;
+     font-size: 15px;
+}
+
+.text1{
+  position : absolute;
+   top: 1800px;
+   left: 1150px;
+   font-size: 20px;
+   color: #444444;
+     text-align: center;
+}
+
+.text1 h3 {
+
+   font-size: 30px;
+   color: #444444;
+}
+.text2{
+  position : absolute;
+   top: 2800px;
+   left: 50px;
+   font-size: 20px;
+   color: #ffffff;
+     text-align: center;
+}
+
+.text2 h3 {
+
+   font-size: 30px;
+   color: #ffffff;
+}
+
+.textbox p{
+   font-size: 20px;
+   color: #ffffff;
+
+}
+
+.shot5 {
+  font-size: 40px;
+  color: #444444;
+}
+.shot5 {
+  position : absolute;
+   top: 7800px;
+   left: 850px;
+
+     text-align: center;
+}
+.island2 {
+  position : absolute;
+   top: 8000px;
+   left: 50px;
+}
+
+.grn {
+  position : absolute;
+   top: 6500px;
+   left: -10px;
+}
+.white1 {
+  position : absolute;
+   top: 8000px;
+   left: 120px;
+}
+
+.islandinf {
+  position : absolute;
+   top: 8130px;
+   left: 1020px;
+}
+.islandinf {
+color: #444444;
+}
+
+.islandname {
+  position : absolute;
+   top: 8050px;
+   left: 1020px;
+}
+.islandname {
+color: #333333;
+font-size: 30px;
+}
+.island3 {
+  position : absolute;
+   top: 8600px;
+   left: -20px;
+}
+.island4 {
+  position : absolute;
+   top: 8600px;
+   left: 570px;
+}
+.island5 {
+  position : absolute;
+   top: 8600px;
+   left: 1150px;
+}
+.back {
+  position: relative;
+  top: -1200px;
+
+}
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+/* 모바일용 */
+@media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .navbar_toggle-btn {
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #444444;
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+
+
+  .section .slidelist .textbox {position:absolute;z-index:1;top:30%;left:55%;transform:translate(-50%,-50%);line-height:1.6;text-align:left}
+  .section .slidelist .textbox h3 {font-size:20px;color:#fff;;transform:translateY(30px);transition:all .5s;}
+  .section .slidelist .textbox p {font-size:13px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+.video1 {position: relative; width: 300%; padding-bottom: 56.25%; right: 500px;}
+.video2 {position: relative; width: 300%; padding-bottom: 56.25%;}
+.video3 {position: relative; width: 300%; padding-bottom: 56.25%;}
+.video1 iframe {position: absolute; width: 100%; height: 100%;}
+
+.textbox {position: relative; width: 100%;}
+}
+
+}
