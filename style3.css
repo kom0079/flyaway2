@@ -102,7 +102,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #91e2cd;
+  background-color: #052E37;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
